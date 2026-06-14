@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promo Vive LM</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f5;
+}
+
+header{
+    background:#198754;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    font-size:2.5rem;
+}
+
+header p{
+    margin-top:10px;
+}
+
+.catalogo{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    padding:30px;
+}
+
+.casa{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.casa:hover{
+    transform:translateY(-5px);
+}
+
+.casa img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.info{
+    padding:15px;
+}
+
+.info h3{
+    margin-bottom:10px;
+}
+
+.precio{
+    color:#198754;
+    font-size:22px;
+    font-weight:bold;
+    margin:12px 0;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    background:#198754;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#157347;
+}
+
+footer{
+    background:#198754;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🏠 Promo Vive LM</h1>
+    <p>Encuentra la casa ideal para ti</p>
+</header>
+
+<section class="catalogo">
+
+<div class="casa">
+    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Casa">
+    <div class="info">
+        <h3>Casa Familiar</h3>
+        <p>3 recámaras, 2 baños y cochera para 2 autos.</p>
+        <p class="precio">$2,500,000 MXN</p>
+        <button>Ver Detalles</button>
+    </div>
+</div>
+
+<div class="casa">
+    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" alt="Casa">
+    <div class="info">
+        <h3>Casa Moderna</h3>
+        <p>4 recámaras, jardín amplio y terraza.</p>
+        <p class="precio">$3,100,000 MXN</p>
+        <button>Ver Detalles</button>
+    </div>
+</div>
+
+<div class="casa">
+    <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80" alt="Casa">
+    <div class="info">
+        <h3>Residencia Premium</h3>
+        <p>Acabados de lujo y espacios amplios.</p>
+        <p class="precio">$4,500,000 MXN</p>
+        <button>Ver Detalles</button>
+    </div>
+</div>
+
+<div class="casa">
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Casa">
+    <div class="info">
+        <h3>Casa Campestre</h3>
+        <p>Terreno amplio y excelente ubicación.</p>
+        <p class="precio">$2,900,000 MXN</p>
+        <button>Ver Detalles</button>
+    </div>
+</div>
+
+<div class="casa">
+    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Casa">
+    <div class="info">
+        <h3>Casa Ejecutiva</h3>
+        <p>Diseño elegante con oficina privada.</p>
+        <p class="precio">$3,300,000 MXN</p>
+        <button>Ver Detalles</button>
+    </div>
+</div>
+
+<div class="casa">
+    <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80" alt="Casa">
+    <div class="info">
+        <h3>Casa Residencial</h3>
+        <p>Ubicada en zona exclusiva y segura.</p>
+        <p class="precio">$5,200,000 MXN</p>
+        <button>Ver Detalles</button>
+    </div>
+</div>
+
+<div class="casa">
+    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="Casa">
+    <div class="info">
+        <h3>Casa con Alberca</h3>
+        <p>Perfecta para disfrutar con la familia.</p>
+        <p class="precio">$4,100,000 MXN</p>
+        <button>Ver Detalles</button>
+    </div>
+</div>
+
+<div class="casa">
+    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=800&q=80" alt="Casa">
+    <div class="info">
+        <h3>Casa Contemporánea</h3>
+        <p>Diseño moderno con acabados premium.</p>
+        <p class="precio">$3,800,000 MXN</p>
+        <button>Ver Detalles</button>
+    </div>
+</div>
+
+</section>
+
+<footer>
+    © 2026 Promo Vive LM - Todos los derechos reservados
+</footer>
+
+</body>
+</html>
