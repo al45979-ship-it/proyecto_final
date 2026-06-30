@@ -3,192 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Promo Vive LM</title>
+<title>PROMO VIVELM | Catálogo de Casas</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:#f4f6f5;
+background:#eef7ee;
 }
 
 header{
-    background:#198754;
-    color:white;
-    text-align:center;
-    padding:30px;
+background:linear-gradient(135deg,#0b7d32,#27ae60);
+color:white;
+padding:35px;
+text-align:center;
+box-shadow:0 5px 10px rgba(0,0,0,.2);
 }
 
 header h1{
-    font-size:2.5rem;
+font-size:45px;
 }
 
 header p{
-    margin-top:10px;
+margin-top:10px;
+font-size:18px;
 }
 
-.catalogo{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-    padding:30px;
+.buscador{
+text-align:center;
+margin:30px;
+}
+
+.buscador input{
+width:60%;
+padding:15px;
+border-radius:30px;
+border:none;
+font-size:18px;
+box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.contenedor{
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+padding-bottom:40px;
 }
 
 .casa{
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    transition:0.3s;
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+transition:.3s;
 }
 
 .casa:hover{
-    transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
 .casa img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
+width:100%;
+height:210px;
+object-fit:cover;
 }
 
 .info{
-    padding:15px;
+padding:20px;
 }
 
-.info h3{
-    margin-bottom:10px;
+.estado{
+background:#28a745;
+color:white;
+display:inline-block;
+padding:6px 14px;
+border-radius:20px;
+font-weight:bold;
+margin-bottom:12px;
 }
 
-.precio{
-    color:#198754;
-    font-size:22px;
-    font-weight:bold;
-    margin:12px 0;
+.rentada{
+background:#e67e22;
+}
+
+.prestada{
+background:#3498db;
+}
+
+.ciudad{
+color:#0b7d32;
+font-weight:bold;
+margin-top:10px;
 }
 
 button{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:6px;
-    background:#198754;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
+margin-top:15px;
+width:100%;
+padding:12px;
+background:#0b7d32;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
 }
 
 button:hover{
-    background:#157347;
+background:#066126;
 }
 
 footer{
-    background:#198754;
-    color:white;
-    text-align:center;
-    padding:15px;
-    margin-top:20px;
+background:#0b7d32;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
 }
 </style>
+
 </head>
+
 <body>
 
 <header>
-    <h1>🏠 Promo Vive LM</h1>
-    <p>Encuentra la casa ideal para ti</p>
+<h1>PROMO VIVELM</h1>
+<p>Catálogo de Casas Disponibles</p>
 </header>
 
-<section class="catalogo">
+<div class="buscador">
+<input type="text" placeholder="Buscar casa...">
+</div>
+
+<div class="contenedor">
 
 <div class="casa">
-    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Casa">
-    <div class="info">
-        <h3>Casa Familiar</h3>
-        <p>3 recámaras, 2 baños y cochera para 2 autos.</p>
-        <p class="precio">$2,500,000 MXN</p>
-        <button>Ver Detalles</button>
-    </div>
+<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600" alt="">
+<div class="info">
+<span class="estado">SOLA</span>
+<h2>ANDROMEDA #257</h2>
+<p>2 PZ · 2 REC</p>
+<p><b>Colonia:</b> Antares</p>
+<p class="ciudad">El Carmen</p>
+<button>Ver Información</button>
+</div>
 </div>
 
 <div class="casa">
-    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" alt="Casa">
-    <div class="info">
-        <h3>Casa Moderna</h3>
-        <p>4 recámaras, jardín amplio y terraza.</p>
-        <p class="precio">$3,100,000 MXN</p>
-        <button>Ver Detalles</button>
-    </div>
+<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600">
+<div class="info">
+<span class="estado">SOLA</span>
+<h2>CAMILO ARRIAGA 714</h2>
+<p><b>Colonia:</b> Centro de Juárez</p>
+<p class="ciudad">Juárez</p>
+<button>Ver Información</button>
+</div>
 </div>
 
 <div class="casa">
-    <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80" alt="Casa">
-    <div class="info">
-        <h3>Residencia Premium</h3>
-        <p>Acabados de lujo y espacios amplios.</p>
-        <p class="precio">$4,500,000 MXN</p>
-        <button>Ver Detalles</button>
-    </div>
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600">
+<div class="info">
+<span class="estado prestada">CUIDADOR</span>
+<h2>TAPALPA 201</h2>
+<p><b>Colonia:</b> Terranova</p>
+<p class="ciudad">Juárez</p>
+<button>Ver Información</button>
+</div>
 </div>
 
 <div class="casa">
-    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Casa">
-    <div class="info">
-        <h3>Casa Campestre</h3>
-        <p>Terreno amplio y excelente ubicación.</p>
-        <p class="precio">$2,900,000 MXN</p>
-        <button>Ver Detalles</button>
-    </div>
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600">
+<div class="info">
+<span class="estado">SOLA</span>
+<h2>MONTERREAL 440</h2>
+<p><b>Colonia:</b> Terranova</p>
+<p class="ciudad">Juárez</p>
+<button>Ver Información</button>
+</div>
 </div>
 
 <div class="casa">
-    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Casa">
-    <div class="info">
-        <h3>Casa Ejecutiva</h3>
-        <p>Diseño elegante con oficina privada.</p>
-        <p class="precio">$3,300,000 MXN</p>
-        <button>Ver Detalles</button>
-    </div>
+<img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600">
+<div class="info">
+<span class="estado">SOLA</span>
+<h2>VILLA TIANEZZA 32</h2>
+<p><b>Colonia:</b> Villa Nova Sec. Nogal</p>
+<p class="ciudad">García</p>
+<button>Ver Información</button>
+</div>
 </div>
 
 <div class="casa">
-    <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80" alt="Casa">
-    <div class="info">
-        <h3>Casa Residencial</h3>
-        <p>Ubicada en zona exclusiva y segura.</p>
-        <p class="precio">$5,200,000 MXN</p>
-        <button>Ver Detalles</button>
-    </div>
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600">
+<div class="info">
+<span class="estado rentada">RENTADA</span>
+<h2>MINERÍA 714 D</h2>
+<p><b>Colonia:</b> Valle de Lincoln</p>
+<p class="ciudad">García</p>
+<button>Ver Información</button>
+</div>
 </div>
 
 <div class="casa">
-    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="Casa">
-    <div class="info">
-        <h3>Casa con Alberca</h3>
-        <p>Perfecta para disfrutar con la familia.</p>
-        <p class="precio">$4,100,000 MXN</p>
-        <button>Ver Detalles</button>
-    </div>
+<img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=600">
+<div class="info">
+<span class="estado">SOLA</span>
+<h2>SAN UBALDO 131</h2>
+<p><b>Colonia:</b> San Felipe</p>
+<p class="ciudad">García</p>
+<button>Ver Información</button>
+</div>
 </div>
 
 <div class="casa">
-    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=800&q=80" alt="Casa">
-    <div class="info">
-        <h3>Casa Contemporánea</h3>
-        <p>Diseño moderno con acabados premium.</p>
-        <p class="precio">$3,800,000 MXN</p>
-        <button>Ver Detalles</button>
-    </div>
+<img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600">
+<div class="info">
+<span class="estado prestada">PRESTADA</span>
+<h2>GRANATE 201 L</h2>
+<p><b>Colonia:</b> García</p>
+<p class="ciudad">García</p>
+<button>Ver Información</button>
+</div>
 </div>
 
-</section>
+<div class="casa">
+<img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=600">
+<div class="info">
+<span class="estado">SOLA</span>
+<h2>43 SUR #1014</h2>
+<p><b>Colonia:</b> Ruiseñores Etapa 1</p>
+<p class="ciudad">Ciénega de Flores</p>
+<button>Ver Información</button>
+</div>
+</div>
+
+<div class="casa">
+<img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600">
+<div class="info">
+<span class="estado">SOLA</span>
+<h2>3 SUR #228</h2>
+<p><b>Colonia:</b> Villas de Carrizalejo</p>
+<p class="ciudad">Ciénega de Flores</p>
+<button>Ver Información</button>
+</div>
+</div>
+
+</div>
 
 <footer>
-    © 2026 Promo Vive LM - Todos los derechos reservados
+<h3>PROMO VIVELM</h3>
+<p>Tu mejor opción para encontrar tu nuevo hogar.</p>
 </footer>
 
 </body>
