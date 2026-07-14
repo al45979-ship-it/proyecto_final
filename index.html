@@ -3,147 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROMO VIVELM | Catálogo de Casas</title>
+<title>PROMO VIVELM | Encuentra tu Nuevo Hogar</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-background:#eef7ee;
-}
-
-header{
-background:linear-gradient(135deg,#0b7d32,#27ae60);
-color:white;
-padding:35px;
-text-align:center;
-box-shadow:0 5px 10px rgba(0,0,0,.2);
-}
-
-header h1{
-font-size:45px;
-}
-
-header p{
-margin-top:10px;
-font-size:18px;
-}
-
-.buscador{
-text-align:center;
-margin:30px;
-}
-
-.buscador input{
-width:60%;
-padding:15px;
-border-radius:30px;
-border:none;
-font-size:18px;
-box-shadow:0 3px 10px rgba(0,0,0,.2);
-}
-
-.contenedor{
-width:90%;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-padding-bottom:40px;
-}
-
-.casa{
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 10px 20px rgba(0,0,0,.15);
-transition:.3s;
-}
-
-.casa:hover{
-transform:translateY(-8px);
-}
-
-.casa img{
-width:100%;
-height:210px;
-object-fit:cover;
-}
-
-.info{
-padding:20px;
-}
-
-.estado{
-background:#28a745;
-color:white;
-display:inline-block;
-padding:6px 14px;
-border-radius:20px;
-font-weight:bold;
-margin-bottom:12px;
-}
-
-.rentada{
-background:#e67e22;
-}
-
-.prestada{
-background:#3498db;
-}
-
-.ciudad{
-color:#0b7d32;
-font-weight:bold;
-margin-top:10px;
-}
-
-button{
-margin-top:15px;
-width:100%;
-padding:12px;
-background:#0b7d32;
-color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-}
-
-button:hover{
-background:#066126;
-}
-
-footer{
-background:#0b7d32;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<header>
-<h1>PROMO VIVELM</h1>
-<p>Catálogo de Casas Disponibles</p>
+<!-- ---------- NAV ---------- -->
+<nav>
+<div class="logo">🏠 PROMO VIVELM</div>
+<ul>
+<li><a href="#catalogo">Casas</a></li>
+<li><a href="#beneficios">Beneficios</a></li>
+<li><a href="#opiniones">Opiniones</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+
+<!-- ---------- HERO ---------- -->
+<header class="hero">
+<h1>Encuentra la Casa de tus Sueños</h1>
+<p>Más de 10 opciones disponibles en Juárez, García, El Carmen y Ciénega de Flores. Casas solas, rentadas y en cuidado, listas para ti.</p>
+<div class="botones-hero">
+<a href="#catalogo"><button class="btn-grande btn-blanco">Ver Catálogo</button></a>
+<a href="#contacto"><button class="btn-grande btn-borde">Contáctanos</button></a>
+</div>
 </header>
 
+<!-- ---------- ESTADISTICAS ---------- -->
+<section class="estadisticas">
+<div>
+<h2 id="numCasas">0</h2>
+<p>Casas Disponibles</p>
+</div>
+<div>
+<h2>4</h2>
+<p>Ciudades</p>
+</div>
+<div>
+<h2>+50</h2>
+<p>Clientes Felices</p>
+</div>
+<div>
+<h2>5</h2>
+<p>Años de Experiencia</p>
+</div>
+</section>
+
+<!-- ---------- POR QUE ELEGIRNOS ---------- -->
+<section class="porque" id="beneficios">
+<h2>¿Por qué elegirnos?</h2>
+<p>Te acompañamos en todo el proceso, sin complicaciones.</p>
+<div class="tarjetas-beneficios">
+<div class="beneficio">
+<div class="icono">✅</div>
+<h3>Casas Verificadas</h3>
+<p>Cada propiedad es visitada y verificada por nuestro equipo antes de publicarla.</p>
+</div>
+<div class="beneficio">
+<div class="icono">💬</div>
+<h3>Atención Personalizada</h3>
+<p>Te asesoramos desde la primera llamada hasta la entrega de llaves.</p>
+</div>
+<div class="beneficio">
+<div class="icono">📍</div>
+<h3>Mejores Ubicaciones</h3>
+<p>Colonias seguras y bien conectadas en toda la zona metropolitana.</p>
+</div>
+<div class="beneficio">
+<div class="icono">💰</div>
+<h3>Precios Justos</h3>
+<p>Opciones para todos los presupuestos, sin sorpresas ni letras chiquitas.</p>
+</div>
+</div>
+</section>
+
+<!-- ---------- CATALOGO ---------- -->
+<section class="seccion-catalogo" id="catalogo">
+<h2>Catálogo de Casas</h2>
+<p class="subtitulo">Explora las opciones disponibles y filtra por estado</p>
+
 <div class="buscador">
-<input type="text" placeholder="Buscar casa...">
+<input type="text" id="inputBuscar" placeholder="Buscar casa, colonia o ciudad..." onkeyup="buscarCasas()">
 </div>
 
-<div class="contenedor">
+<div class="filtros">
+<button class="filtro-btn activo" onclick="filtrarPorEstado('todas', this)">Todas</button>
+<button class="filtro-btn" onclick="filtrarPorEstado('sola', this)">Solas</button>
+<button class="filtro-btn" onclick="filtrarPorEstado('rentada', this)">Rentadas</button>
+<button class="filtro-btn" onclick="filtrarPorEstado('prestada', this)">Prestadas / Cuidador</button>
+</div>
 
-<div class="casa">
+<p class="contador" id="contador"></p>
+
+<div class="contenedor" id="contenedor">
+
+<div class="casa" data-estado="sola">
 <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600" alt="">
 <div class="info">
 <span class="estado">SOLA</span>
@@ -151,115 +108,192 @@ margin-top:30px;
 <p>2 PZ · 2 REC</p>
 <p><b>Colonia:</b> Antares</p>
 <p class="ciudad">El Carmen</p>
-<button>Ver Información</button>
+<button onclick="verInformacion(this)">Ver Información</button>
 </div>
 </div>
 
-<div class="casa">
+<div class="casa" data-estado="sola">
 <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600">
 <div class="info">
 <span class="estado">SOLA</span>
 <h2>CAMILO ARRIAGA 714</h2>
 <p><b>Colonia:</b> Centro de Juárez</p>
 <p class="ciudad">Juárez</p>
-<button>Ver Información</button>
+<button onclick="verInformacion(this)">Ver Información</button>
 </div>
 </div>
 
-<div class="casa">
+<div class="casa" data-estado="prestada">
 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600">
 <div class="info">
 <span class="estado prestada">CUIDADOR</span>
 <h2>TAPALPA 201</h2>
 <p><b>Colonia:</b> Terranova</p>
 <p class="ciudad">Juárez</p>
-<button>Ver Información</button>
+<button onclick="verInformacion(this)">Ver Información</button>
 </div>
 </div>
 
-<div class="casa">
+<div class="casa" data-estado="sola">
 <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600">
 <div class="info">
 <span class="estado">SOLA</span>
 <h2>MONTERREAL 440</h2>
 <p><b>Colonia:</b> Terranova</p>
 <p class="ciudad">Juárez</p>
-<button>Ver Información</button>
+<button onclick="verInformacion(this)">Ver Información</button>
 </div>
 </div>
 
-<div class="casa">
+<div class="casa" data-estado="sola">
 <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600">
 <div class="info">
 <span class="estado">SOLA</span>
 <h2>VILLA TIANEZZA 32</h2>
 <p><b>Colonia:</b> Villa Nova Sec. Nogal</p>
 <p class="ciudad">García</p>
-<button>Ver Información</button>
+<button onclick="verInformacion(this)">Ver Información</button>
 </div>
 </div>
 
-<div class="casa">
+<div class="casa" data-estado="rentada">
 <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600">
 <div class="info">
 <span class="estado rentada">RENTADA</span>
 <h2>MINERÍA 714 D</h2>
 <p><b>Colonia:</b> Valle de Lincoln</p>
 <p class="ciudad">García</p>
-<button>Ver Información</button>
+<button onclick="verInformacion(this)">Ver Información</button>
 </div>
 </div>
 
-<div class="casa">
+<div class="casa" data-estado="sola">
 <img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=600">
 <div class="info">
 <span class="estado">SOLA</span>
 <h2>SAN UBALDO 131</h2>
 <p><b>Colonia:</b> San Felipe</p>
 <p class="ciudad">García</p>
-<button>Ver Información</button>
+<button onclick="verInformacion(this)">Ver Información</button>
 </div>
 </div>
 
-<div class="casa">
+<div class="casa" data-estado="prestada">
 <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600">
 <div class="info">
 <span class="estado prestada">PRESTADA</span>
 <h2>GRANATE 201 L</h2>
 <p><b>Colonia:</b> García</p>
 <p class="ciudad">García</p>
-<button>Ver Información</button>
+<button onclick="verInformacion(this)">Ver Información</button>
 </div>
 </div>
 
-<div class="casa">
+<div class="casa" data-estado="sola">
 <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=600">
 <div class="info">
 <span class="estado">SOLA</span>
 <h2>43 SUR #1014</h2>
 <p><b>Colonia:</b> Ruiseñores Etapa 1</p>
 <p class="ciudad">Ciénega de Flores</p>
-<button>Ver Información</button>
+<button onclick="verInformacion(this)">Ver Información</button>
 </div>
 </div>
 
-<div class="casa">
+<div class="casa" data-estado="sola">
 <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=600">
 <div class="info">
 <span class="estado">SOLA</span>
 <h2>3 SUR #228</h2>
 <p><b>Colonia:</b> Villas de Carrizalejo</p>
 <p class="ciudad">Ciénega de Flores</p>
-<button>Ver Información</button>
+<button onclick="verInformacion(this)">Ver Información</button>
 </div>
 </div>
 
 </div>
+
+<p class="sin-resultados" id="sinResultados">No se encontró ninguna casa con ese nombre 😕</p>
+
+</section>
+
+<!-- ---------- TESTIMONIOS ---------- -->
+<section class="testimonios" id="opiniones">
+<h2>Lo que dicen nuestros clientes</h2>
+<div class="tarjetas-testimonios">
+<div class="testimonio">
+<div class="estrellas">★★★★★</div>
+<p>"Encontré mi casa en menos de una semana. Todo el proceso fue muy rápido y sin complicaciones."</p>
+<div class="autor">— Laura Martínez, Juárez N.L.</div>
+</div>
+<div class="testimonio">
+<div class="estrellas">★★★★★</div>
+<p>"Muy buena atención, me explicaron todo paso a paso y respondieron mis dudas al instante."</p>
+<div class="autor">— Ricardo Peña, García N.L.</div>
+</div>
+<div class="testimonio">
+<div class="estrellas">★★★★☆</div>
+<p>"Buenas opciones y precios justos. Recomendado si estás buscando tu primera casa."</p>
+<div class="autor">— Ana Sofía Reyes, El Carmen N.L.</div>
+</div>
+</div>
+</section>
+
+<!-- ---------- CONTACTO ---------- -->
+<section class="contacto" id="contacto">
+<h2>¿Interesado en alguna casa?</h2>
+<p>Déjanos tus datos y te contactamos el mismo día</p>
+
+<div class="formulario">
+<label for="nombre">Nombre</label>
+<input type="text" id="nombre" placeholder="Tu nombre completo">
+
+<label for="telefono">Teléfono</label>
+<input type="text" id="telefono" placeholder="Ej. 8112345678">
+
+<label for="mensaje">Mensaje</label>
+<textarea id="mensaje" placeholder="Cuéntanos qué tipo de casa buscas..."></textarea>
+
+<button onclick="enviarFormulario()">Enviar Mensaje</button>
+
+<div class="mensaje-enviado" id="mensajeEnviado">
+¡Gracias! Te contactaremos muy pronto 🎉
+</div>
+</div>
+</section>
 
 <footer>
 <h3>PROMO VIVELM</h3>
 <p>Tu mejor opción para encontrar tu nuevo hogar.</p>
+<div class="redes">
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">WhatsApp</a>
+</div>
+<p style="margin-top:15px; font-size:12px; opacity:.8;">© 2026 Promo Vivelm. Todos los derechos reservados.</p>
 </footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a class="flotante-whatsapp" href="https://wa.me/5218100000000" target="_blank" title="Escríbenos por WhatsApp">💬</a>
+
+<!-- Botón de subir arriba -->
+<button class="subir-arriba" id="btnSubir" onclick="subirArriba()">⬆</button>
+
+<!-- Ventana emergente que muestra la información de la casa -->
+<div class="fondo-modal" id="fondoModal">
+  <div class="caja-modal">
+    <img id="modalImagen" src="" alt="">
+    <div class="info">
+      <span class="estado" id="modalEstado"></span>
+      <h2 id="modalNombre"></h2>
+      <p id="modalColonia"></p>
+      <p id="modalCiudad"></p>
+      <button class="cerrar" onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
