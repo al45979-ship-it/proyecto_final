@@ -1,0 +1,594 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#eef7ee;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* ---------- NAV ---------- */
+
+nav{
+background:white;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+position:sticky;
+top:0;
+z-index:50;
+}
+
+nav .logo{
+font-size:22px;
+font-weight:bold;
+color:#0b7d32;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+nav ul li a{
+font-weight:bold;
+color:#333;
+transition:.2s;
+}
+
+nav ul li a:hover{
+color:#0b7d32;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+background:linear-gradient(135deg,#0b7d32,#27ae60);
+color:white;
+padding:70px 30px;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:19px;
+max-width:600px;
+margin:0 auto 30px auto;
+opacity:.95;
+}
+
+.hero .botones-hero{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn-grande{
+padding:15px 30px;
+border-radius:30px;
+font-size:17px;
+font-weight:bold;
+border:none;
+cursor:pointer;
+transition:.2s;
+}
+
+.btn-blanco{
+background:white;
+color:#0b7d32;
+}
+
+.btn-blanco:hover{
+background:#e9f7ef;
+transform:translateY(-3px);
+}
+
+.btn-borde{
+background:transparent;
+color:white;
+border:2px solid white;
+}
+
+.btn-borde:hover{
+background:rgba(255,255,255,.15);
+transform:translateY(-3px);
+}
+
+/* ---------- ESTADISTICAS ---------- */
+
+.estadisticas{
+background:white;
+display:flex;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+padding:35px 20px;
+box-shadow:0 3px 10px rgba(0,0,0,.05);
+}
+
+.estadisticas div{
+text-align:center;
+}
+
+.estadisticas h2{
+color:#0b7d32;
+font-size:34px;
+}
+
+.estadisticas p{
+color:#666;
+font-size:14px;
+margin-top:5px;
+}
+
+/* ---------- POR QUE ELEGIRNOS ---------- */
+
+.porque{
+padding:60px 30px;
+text-align:center;
+}
+
+.porque h2{
+color:#0b7d32;
+font-size:32px;
+margin-bottom:10px;
+}
+
+.porque > p{
+color:#666;
+margin-bottom:40px;
+}
+
+.tarjetas-beneficios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
+}
+
+.beneficio{
+background:white;
+padding:30px 20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.beneficio:hover{
+transform:translateY(-6px);
+}
+
+.beneficio .icono{
+font-size:36px;
+margin-bottom:12px;
+}
+
+.beneficio h3{
+color:#0b7d32;
+margin-bottom:8px;
+}
+
+.beneficio p{
+color:#666;
+font-size:14px;
+}
+
+/* ---------- CATALOGO ---------- */
+
+.seccion-catalogo{
+padding:20px 0 40px 0;
+}
+
+.seccion-catalogo > h2{
+text-align:center;
+color:#0b7d32;
+font-size:32px;
+margin-bottom:5px;
+}
+
+.seccion-catalogo > p.subtitulo{
+text-align:center;
+color:#666;
+margin-bottom:25px;
+}
+
+.buscador{
+text-align:center;
+margin:20px 30px;
+}
+
+.buscador input{
+width:60%;
+padding:15px;
+border-radius:30px;
+border:none;
+font-size:18px;
+box-shadow:0 3px 10px rgba(0,0,0,.2);
+outline:none;
+}
+
+.buscador input:focus{
+box-shadow:0 0 0 3px #27ae60;
+}
+
+.filtros{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin-bottom:15px;
+}
+
+.filtro-btn{
+padding:8px 18px;
+border-radius:20px;
+border:2px solid #0b7d32;
+background:white;
+color:#0b7d32;
+font-weight:bold;
+cursor:pointer;
+transition:.2s;
+}
+
+.filtro-btn:hover{
+background:#e9f7ef;
+}
+
+.filtro-btn.activo{
+background:#0b7d32;
+color:white;
+}
+
+.contador{
+text-align:center;
+color:#0b7d32;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.contenedor{
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+padding-bottom:40px;
+}
+
+.casa{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.casa:hover{
+transform:translateY(-8px);
+}
+
+.casa img{
+width:100%;
+height:210px;
+object-fit:cover;
+}
+
+.info{
+padding:20px;
+}
+
+.estado{
+background:#28a745;
+color:white;
+display:inline-block;
+padding:6px 14px;
+border-radius:20px;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+.rentada{
+background:#e67e22;
+}
+
+.prestada{
+background:#3498db;
+}
+
+.ciudad{
+color:#0b7d32;
+font-weight:bold;
+margin-top:10px;
+}
+
+.sin-resultados{
+text-align:center;
+padding:40px;
+color:#666;
+font-size:18px;
+display:none;
+}
+
+button{
+margin-top:15px;
+width:100%;
+padding:12px;
+background:#0b7d32;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+transition:.2s;
+}
+
+button:hover{
+background:#066126;
+}
+
+/* ---------- TESTIMONIOS ---------- */
+
+.testimonios{
+background:white;
+padding:60px 30px;
+text-align:center;
+}
+
+.testimonios h2{
+color:#0b7d32;
+font-size:32px;
+margin-bottom:40px;
+}
+
+.tarjetas-testimonios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
+}
+
+.testimonio{
+background:#eef7ee;
+padding:25px;
+border-radius:15px;
+text-align:left;
+}
+
+.testimonio .estrellas{
+color:#f1c40f;
+margin-bottom:10px;
+}
+
+.testimonio p{
+color:#444;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.testimonio .autor{
+font-weight:bold;
+color:#0b7d32;
+font-size:14px;
+}
+
+/* ---------- CONTACTO ---------- */
+
+.contacto{
+padding:60px 30px;
+text-align:center;
+}
+
+.contacto h2{
+color:#0b7d32;
+font-size:32px;
+margin-bottom:10px;
+}
+
+.contacto > p{
+color:#666;
+margin-bottom:30px;
+}
+
+.formulario{
+max-width:500px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+text-align:left;
+}
+
+.formulario label{
+display:block;
+margin-bottom:6px;
+font-weight:bold;
+color:#333;
+font-size:14px;
+}
+
+.formulario input,
+.formulario textarea{
+width:100%;
+padding:12px;
+margin-bottom:18px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:15px;
+font-family:inherit;
+}
+
+.formulario textarea{
+resize:vertical;
+min-height:80px;
+}
+
+.mensaje-enviado{
+display:none;
+background:#d4edda;
+color:#155724;
+padding:15px;
+border-radius:8px;
+margin-top:15px;
+text-align:center;
+font-weight:bold;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+background:#0b7d32;
+color:white;
+text-align:center;
+padding:30px 20px;
+}
+
+footer .redes{
+margin-top:15px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+footer .redes a{
+font-size:14px;
+opacity:.9;
+}
+
+footer .redes a:hover{
+opacity:1;
+text-decoration:underline;
+}
+
+/* ---------- BOTON FLOTANTE WHATSAPP ---------- */
+
+.flotante-whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25d366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+z-index:60;
+transition:.2s;
+}
+
+.flotante-whatsapp:hover{
+transform:scale(1.1);
+}
+
+/* ---------- BOTON SUBIR ARRIBA ---------- */
+
+.subir-arriba{
+position:fixed;
+bottom:25px;
+left:25px;
+background:#0b7d32;
+color:white;
+width:50px;
+height:50px;
+border-radius:50%;
+border:none;
+font-size:20px;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+display:none;
+z-index:60;
+}
+
+.subir-arriba:hover{
+background:#066126;
+}
+
+/* ---------- ventana emergente (modal) ---------- */
+
+.fondo-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+justify-content:center;
+align-items:center;
+z-index:100;
+padding:20px;
+}
+
+.caja-modal{
+background:white;
+width:90%;
+max-width:400px;
+border-radius:15px;
+overflow:hidden;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.caja-modal img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.caja-modal .info{
+padding:25px;
+}
+
+.caja-modal h2{
+color:#0b7d32;
+margin-bottom:10px;
+}
+
+.caja-modal p{
+margin:6px 0;
+color:#333;
+}
+
+.cerrar{
+margin-top:15px;
+background:#c0392b;
+}
+
+.cerrar:hover{
+background:#922b21;
+}
+
+@media(max-width:600px){
+nav ul{
+gap:14px;
+font-size:14px;
+}
+.hero h1{
+font-size:32px;
+}
+.buscador input{
+width:90%;
+}
+}
